@@ -1,5 +1,5 @@
 import bpy
-from .functions import find_iso_collection, make_iso_collection, move_iso_objects
+from .functions import move_iso_objects
 
 class ISOQ_OT_True_Camera(bpy.types.Operator):
     """Generates isometric camera which is 35.264 to the horizontal axes"""
