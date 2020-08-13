@@ -24,11 +24,11 @@ View3d > N-Panel > IsometQ
 		- Extrude X (extrude wall and floor to the left)
 		- Extrude Y (extrude wall and floor to the right)
 	- Toggle individual parts on or off.
-	- Toggle hidden ceiling and front walls for lighting purposes.
-	- Toggle emission planes for quick lighting from outside.
+	- Toggle hidden ceiling and front walls for lighting purposes. (See gif below)
+	- Toggle emission planes for quick lighting from outside. (See gif below)
 	
 - **Generates Isometric cameras**
-	- True isometric camera (35.264° to the horizontal)
+	- True isometric camera (35.264° to the horizontal) (See gif below)
 	- Game isometric camera (30° to the horizontal)
 	- Quick resolution presets
 	- Control orthographic scale + z location of camera in the redo panel
