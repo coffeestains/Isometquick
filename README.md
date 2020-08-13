@@ -18,7 +18,7 @@ View3d > N-Panel > IsometQ
 	- Control the following attributes in the redo Panel:
 		- Floor scale (x and y)
 		- Wall height
-		- Thickness (Floor and walls)
+		- Thickness (Floor + walls using solidify modifier)
 		- Wall thickness
 		- Floor thickness
 		- Extrude X (extrude wall and floor to the left)
