@@ -33,7 +33,7 @@ View3d > N-Panel > IsometQ
 	- Quick resolution presets
 	- Control orthographic scale + z location of camera in the redo panel
 
-***Note the door and window in screenshots are from archimesh***
+***Note: the door and window in screenshots are from archimesh***
 
 ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)
 
