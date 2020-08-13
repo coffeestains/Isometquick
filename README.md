@@ -9,7 +9,9 @@ A blender addon for quickly creating an isometric structure and cameras.
 
 [Features](https://github.com/coffeestains/Isometquick#features)
 
-[Contact](https://github.com/coffeestains/Isometquick#contact)
+[Gifs](https://github.com/coffeestains/Isometquick#gifs)
+
+[Contact](https://github.com/coffeestains/Isometquick#contact-me-to-report-bugs-suggest-features-or-if-you-have-any-queries)
 
 ### Download
 
@@ -45,6 +47,7 @@ View3d > N-Panel > IsometQ
 	- Quick resolution presets
 	- Control orthographic scale + z location of camera in the redo panel
 
+### Gifs
 ***Note: the door and window in screenshots are from archimesh***
 
 ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)
