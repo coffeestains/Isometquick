@@ -14,7 +14,7 @@
 
 bl_info = {
     "name": "Isometquick",
-    "author": "Noel F. Lobo (Github:@coffeestains Instagram:@codellect)",
+    "author": "Noel Francis Lobo (Github:@coffeestains Instagram:@codellect)",
     "description": "Creates an isometric room model and appropriate cameras",
     "location": "N-Panel",
     "blender": (2, 80, 0),
