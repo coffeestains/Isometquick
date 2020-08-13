@@ -9,10 +9,10 @@ In Blender: Edit > Preferences > Addons > Install then select the downloaded zip
 View3d > N-Panel > IsometQ
 
 ### Features:
-![Panel](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
+![Panel](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)
 - **Creates an isometric room with one click.**
 	- Control the following attributes in the redo Panel:
-		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
+		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
 		- Floor scale (x and y)
 		- Wall height
 		- Thickness (Floor and walls)
