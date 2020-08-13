@@ -41,5 +41,5 @@ View3d > N-Panel > IsometQ
 ![Light](https://github.com/coffeestains/Isometquick/blob/master/images/light.gif)
 ![Camera](https://github.com/coffeestains/Isometquick/blob/master/images/camera.gif)
 	
-### Contact for suggestions features etc:
+### Contact me to report bugs, suggest features or if you have any queries:
 [@codellect on Instagram](https://www.instagram.com/codellect/)
