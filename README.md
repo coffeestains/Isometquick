@@ -11,8 +11,9 @@ View3d > N-Panel > IsometQ
 ### Features:
 ![Panel](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
 
-![Iso redo](https://github.com/coffeestains/Isometquick/blob/master/images/iso_redo.jpg)
 ![Iso redo](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
+![Iso redo](https://github.com/coffeestains/Isometquick/blob/master/images/iso_redo.jpg)
+
 - **Creates an floor and walls for isometric scenes with one click.**
 	- Control the following attributes in the redo Panel:
 		- Floor scale (x and y)
