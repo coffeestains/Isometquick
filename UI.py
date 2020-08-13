@@ -95,7 +95,7 @@ class ISOQ_PT_CameraPanel(bpy.types.Panel):
 
         column = box.column()
         row = column.split(factor=0.31)
-        row.label(text="Custom Resolution:")
+        row.label(text="Custom Res:")
         row.prop(context.scene.render, "resolution_x")
         row.prop(context.scene.render, "resolution_y")
         row = layout.row()
