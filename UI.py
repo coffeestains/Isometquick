@@ -55,7 +55,7 @@ class ISOQ_PT_CameraPanel(bpy.types.Panel):
     bl_label = "Isometquick Camera"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
-    bl_category = "Iso"
+    bl_category = "IsometQ"
     
 
     def draw(self, context):
