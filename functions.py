@@ -14,7 +14,7 @@ def make_iso_collection(collection_name, parent_collection):
     """
     Checks if collection exists otherwise creates it.
     """
-    if collection_name in bpy.data.collections: # Checks in collection exists
+    if collection_name in bpy.data.collections: # Checks if collection exists
         return bpy.data.collections[collection_name]
     else:
         new_collection = bpy.data.collections.new(collection_name)
