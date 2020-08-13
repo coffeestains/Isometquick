@@ -30,4 +30,4 @@ View3d > N-Panel > IsometQ
 	- Control orthographic scale + z location of camera in the redo panel
 	
 ### Contact for suggestions features etc:
-	[@codellect on instagram](https://www.instagram.com/codellect/ "@codellect on instagram")
+[@codellect on Instagram](https://www.instagram.com/codellect/)
