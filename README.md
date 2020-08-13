@@ -18,9 +18,10 @@ View3d > N-Panel > IsometQ
 		- Floor thickness
 		- Extrude X (extrude walls and floor to the left)
 		- Extrude Y (extrude walls and floor to the right)
-	- Toggle Individual Parts on or off.
-	- Toggle Hidden ceiling and front walls for lighting purposes.
-	- Toggle Emission planes for quick lighting from outside.
+	- Toggle individual parts on or off.
+	- Toggle hidden ceiling and front walls for lighting purposes.
+	- Toggle emission planes for quick lighting from outside.
+	![alt text](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
 - **Generates Isometric cameras**
 	- True isometric camera (35.264° to the horizontal)
 	- Game isometric camera (30° to the horizontal)
