@@ -12,23 +12,20 @@ View3d > N-Panel > IsometQ
 ![Panel](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
 - **Creates an isometric room with one click.**
 	- Control the following attributes in the redo Panel:
+		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)
 		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
 		- Floor scale (x and y)
 		- Wall height
 		- Thickness (Floor and walls)
 		- Wall thickness
 		- Floor thickness
-		- Extrude X (extrude walls and floor to the left)
-		- Extrude Y (extrude walls and floor to the right)
-		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)
+		- Extrude X (extrude wall and floor to the left)
+		- Extrude Y (extrude wall and floor to the right)
 	- Toggle individual parts on or off.
 	- Toggle hidden ceiling and front walls for lighting purposes.
 	- ![Hidden](https://github.com/coffeestains/Isometquick/blob/master/images/walls.gif)
 	- Toggle emission planes for quick lighting from outside.
 	- ![Light](https://github.com/coffeestains/Isometquick/blob/master/images/light.gif)
-
-
-
 
 - **Generates Isometric cameras**
 	- True isometric camera (35.264° to the horizontal)
