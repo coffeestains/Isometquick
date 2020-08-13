@@ -43,4 +43,5 @@ View3d > N-Panel > IsometQ
 	
 ### Contact me to report bugs, suggest features or if you have any queries:
 I'm still learning blender and it's API so if you find any bugs, please tell me :)
+
 [@codellect on Instagram](https://www.instagram.com/codellect/)
