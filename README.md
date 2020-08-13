@@ -22,6 +22,7 @@ View3d > N-Panel > IsometQ
 	- Toggle individual parts on or off.
 	- Toggle hidden ceiling and front walls for lighting purposes. 
 	- Toggle emission planes for quick lighting from outside.
+
 ![Hidden](https://github.com/coffeestains/Isometquick/blob/master/images/Walls.gif)
 
 
