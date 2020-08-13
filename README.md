@@ -10,9 +10,8 @@ View3d > N-Panel > IsometQ
 
 ### Features:
 ![Panel](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)
-- **Creates an isometric room with one click.**
+- **Creates an floor and walls for isometric scenes with one click.**
 	- Control the following attributes in the redo Panel:
-		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
 		- Floor scale (x and y)
 		- Wall height
 		- Thickness (Floor and walls)
@@ -22,17 +21,17 @@ View3d > N-Panel > IsometQ
 		- Extrude Y (extrude wall and floor to the right)
 	- Toggle individual parts on or off.
 	- Toggle hidden ceiling and front walls for lighting purposes.
-	- ![Hidden](https://github.com/coffeestains/Isometquick/blob/master/images/walls.gif)
 	- Toggle emission planes for quick lighting from outside.
-	- ![Light](https://github.com/coffeestains/Isometquick/blob/master/images/light.gif)
+
+![Hidden](https://github.com/coffeestains/Isometquick/blob/master/images/walls.gif)![Light](https://github.com/coffeestains/Isometquick/blob/master/images/light.gif)
 
 - **Generates Isometric cameras**
 	- True isometric camera (35.264° to the horizontal)
 	- Game isometric camera (30° to the horizontal)
-	- ![Camera](https://github.com/coffeestains/Isometquick/blob/master/images/camera.gif)
 	- Quick resolution presets
 	- Control orthographic scale + z location of camera in the redo panel
-	- ![Iso redo](https://github.com/coffeestains/Isometquick/blob/master/images/iso_redo.jpg)
+![Camera](https://github.com/coffeestains/Isometquick/blob/master/images/camera.gif)
+![Iso redo](https://github.com/coffeestains/Isometquick/blob/master/images/iso_redo.jpg)
 	
 ### Contact for suggestions features etc:
 [@codellect on Instagram](https://www.instagram.com/codellect/)
