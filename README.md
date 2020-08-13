@@ -28,8 +28,8 @@ View3d > N-Panel > IsometQ
 	- Toggle emission planes for quick lighting from outside. (See gif below)
 	
 - **Generates Isometric cameras**
-	- True isometric camera (35.264° to the horizontal) (See gif below)
-	- Game isometric camera (30° to the horizontal)
+	- True isometric camera ([35.264° to the horizontal](https://en.wikipedia.org/wiki/Isometric_projection) precisely arcsin ​1⁄√3 or arctan ​1⁄√2, which is related to the [Magic angle](https://en.wikipedia.org/wiki/Magic_angle)) (See gif below)
+	- Game isometric camera ([30° to the horizontal](https://en.wikipedia.org/wiki/Isometric_video_game_graphics))
 	- Quick resolution presets
 	- Control orthographic scale + z location of camera in the redo panel
 
