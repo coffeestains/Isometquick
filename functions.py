@@ -95,7 +95,7 @@ def ISOQ_plane_emission():
     def assign_emission(obj):
         if emission_name not in bpy.data.materials:
             iso_emission = bpy.data.materials.new(emission_name)
-            obj.active_material = iso_emission  #UNWANTED RESULTS START HERE
+            obj.active_material = iso_emission
             iso_emission.use_nodes = True
             nodes = iso_emission.node_tree.nodes
             nodes.clear()
