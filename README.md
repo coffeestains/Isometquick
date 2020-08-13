@@ -12,8 +12,7 @@ View3d > N-Panel > IsometQ
 ![Panel](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
 - **Creates an isometric room with one click.**
 	- Control the following attributes in the redo Panel:
-		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)
-		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
+		- ![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redopanel.png)![Redo Panel](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
 		- Floor scale (x and y)
 		- Wall height
 		- Thickness (Floor and walls)
