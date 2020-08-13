@@ -99,7 +99,7 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
         bpy.context.object.name = "ISO Emission Left"
         bpy.ops.transform.translate(value=(-1*ISOQ_light_distance(scale, height, wall_thickness), -y_extrude/2, height/2), orient_type='GLOBAL')
         bpy.ops.transform.resize(value=(ISOQ_light_hypotenuse(height), scale+y_extrude, 1), orient_type='GLOBAL')
-        bpy.ops.transform.rotate(value=0.785398, orient_axis='Y', orient_type='GLOBAL')
+        bpy.ops.transform.rotate(value=-0.785398, orient_axis='Y', orient_type='GLOBAL')
         bpy.context.object.cycles_visibility.camera = False
 
     def add_right_light(self, scale, height, wall_thickness, x_extrude):
@@ -107,7 +107,7 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
         bpy.context.object.name = "ISO Emission Right"
         bpy.ops.transform.translate(value=(x_extrude/2, ISOQ_light_distance(scale, height, wall_thickness), height/2), orient_type='GLOBAL')
         bpy.ops.transform.resize(value=(scale+x_extrude, ISOQ_light_hypotenuse(height), 1), orient_type='GLOBAL')
-        bpy.ops.transform.rotate(value=0.785398, orient_axis='X', orient_type='GLOBAL')
+        bpy.ops.transform.rotate(value=-0.785398, orient_axis='X', orient_type='GLOBAL')
         bpy.context.object.cycles_visibility.camera = False
         
     def execute(self, context):
