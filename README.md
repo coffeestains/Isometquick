@@ -30,6 +30,7 @@ View3d > N-Panel > IsometQ
 	- Game isometric camera (30° to the horizontal)
 	- Quick resolution presets
 	- Control orthographic scale + z location of camera in the redo panel
+	
 ![Camera](https://github.com/coffeestains/Isometquick/blob/master/images/camera.gif)
 ![Iso redo](https://github.com/coffeestains/Isometquick/blob/master/images/iso_redo.jpg)
 	
