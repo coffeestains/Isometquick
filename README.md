@@ -1,5 +1,14 @@
 # Isometquick
-A blender addon for quickly creating an isometric structure and cameras
+A blender addon for quickly creating an isometric structure and cameras.
+
+### Installation
+
+In Blender: Edit > Preferences > Addons > Install then select the downloaded zip file.
+
+UV Editor > N Panel > UV Squares
+
+### Location:
+View3d > N-Panel > IsometQ
 
 ### Features:
 - **Creates an isometric room with one click.**
