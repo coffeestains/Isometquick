@@ -1,6 +1,14 @@
 # Isometquick
 A blender addon for quickly creating an isometric structure and cameras.
 
+[Download](https://github.com/coffeestains/Isometquick#download)
+[Install](https://github.com/coffeestains/Isometquick#installation)
+[Location](https://github.com/coffeestains/Isometquick#location)
+[Features](https://github.com/coffeestains/Isometquick#features)
+[Contact](https://github.com/coffeestains/Isometquick#contact)
+
+### Download
+
 ### Installation
 
 In Blender: Edit > Preferences > Addons > Install then select the downloaded zip file.
