@@ -10,7 +10,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
-# Addon by Noel F. Lobo 
+# Copyright (C) 2020 Noel Francis Lobo
+# Have fun :)
 
 bl_info = {
     "name": "Isometquick",
