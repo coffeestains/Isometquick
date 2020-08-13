@@ -21,7 +21,8 @@ View3d > N-Panel > IsometQ
 	- Toggle individual parts on or off.
 	- Toggle hidden ceiling and front walls for lighting purposes.
 	- Toggle emission planes for quick lighting from outside.
-	![alt text](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
+	
+![alt text](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
 - **Generates Isometric cameras**
 	- True isometric camera (35.264° to the horizontal)
 	- Game isometric camera (30° to the horizontal)
