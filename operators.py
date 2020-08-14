@@ -1,5 +1,5 @@
 import bpy
-from .functions import move_iso_objects, ISOQ_light_hypotenuse, ISOQ_light_distance, ISOQ_plane_emission
+from .functions import move_iso_objects, isoq_light_hypotenuse, isoq_light_distance, isoq_plane_emission
 
 class ISOQ_OT_StructGen(bpy.types.Operator):
     """Generate isometric floors and walls"""
