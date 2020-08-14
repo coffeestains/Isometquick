@@ -54,7 +54,7 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
         bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, 0))
         bpy.context.object.name = "Iso Floor"
         bpy.ops.transform.resize(value=(scale+x_extrude, scale+y_extrude, 1), orient_type='GLOBAL')
-        if wall_thickness:
+        if floor_thickness:
             bpy.ops.object.modifier_add(type='SOLIDIFY')
             bpy.context.object.modifiers["Solidify"].thickness = floor_thickness
         bpy.ops.transform.translate(value=(x_extrude/2, -y_extrude/2, 0), orient_type='GLOBAL')
