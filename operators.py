@@ -10,37 +10,44 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
 
     floor_scale_value: bpy.props.FloatProperty(
         name='Floor Scale',
-        default = 4
+        default = 4,
+        min = 0
     )
     
     wall_height_value: bpy.props.FloatProperty(
         name='Wall height',
-        default = 4
+        default = 4,
+        min = 0
     )
     
     equal_thickness_value: bpy.props.FloatProperty(
         name='Thickness',
-        default = 0.15
+        default = 0.15,
+        min = 0
     )
     
     wall_thickness_value: bpy.props.FloatProperty(
         name='Edit Wall Thickness',
-        default = 0
+        default = 0,
+        min = 0
     )
 
     floor_thickness_value: bpy.props.FloatProperty(
         name='Edit Floor Thickness',
-        default = 0
+        default = 0,
+        min = 0
     )
     
     x_extrude_value: bpy.props.FloatProperty(
         name='Extrude X',
-        default = 0
+        default = 0,
+        min = 0
     )
     
     y_extrude_value: bpy.props.FloatProperty(
         name='Extrude Y',
-        default = 0
+        default = 0,
+        min = 0
     )
             
     def add_floor(self, scale, floor_thickness, x_extrude, y_extrude):
