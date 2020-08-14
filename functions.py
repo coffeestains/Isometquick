@@ -68,7 +68,7 @@ def move_iso_objects():
         move(coll_name, list_name)
     return
 
-def ISOQ_light_hypotenuse(height):
+def isoq_light_hypotenuse(height):
     """
     edits length of 'light plane'
     """
@@ -76,18 +76,18 @@ def ISOQ_light_hypotenuse(height):
     return hypotenuse
 
 
-def ISOQ_light_distance(scale, height, thickness):
+def isoq_light_distance(scale, height, thickness):
     """
     moves plane to a perfect 45 degree angle to the wall
     """
     half_height = height/2
-    half_hypotenuse = ISOQ_light_hypotenuse(height/2)
+    half_hypotenuse = isoq_light_hypotenuse(height/2)
     base = half_hypotenuse**2 - half_height**2
     ans = math.sqrt(base)
     return scale/2+thickness+ans
 
 
-def ISOQ_plane_emission():
+def isoq_plane_emission():
     """
     Applies emission textures to both 'light planes'
     """
