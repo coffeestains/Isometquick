@@ -137,13 +137,13 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
             self.add_left_light(floor_scale, wall_height, wall_thickness, y_extrude)
         
         if iso_tool.create_hidden_ceiling:
-            self.add_hidden_ceiling(floor_scale, wall_height,x_extrude, y_extrude)
+            self.add_hidden_ceiling(floor_scale, wall_height, x_extrude, y_extrude)
         
         if iso_tool.create_hidden_rightwall:
-            self.add_hidden_rightwall(floor_scale, wall_height,x_extrude, y_extrude)
+            self.add_hidden_rightwall(floor_scale, wall_height, x_extrude, y_extrude)
         
         if iso_tool.create_hidden_leftwall:
-            self.add_hidden_leftwall(floor_scale, wall_height,x_extrude, y_extrude)
+            self.add_hidden_leftwall(floor_scale, wall_height, x_extrude, y_extrude)
 
         move_iso_objects()
         ISOQ_plane_emission()
