@@ -52,32 +52,32 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
             
     def add_floor(self, scale, floor_thickness, x_extrude, y_extrude):
         bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, 0))
-        bpy.context.object.name = "Iso Floor"
         bpy.ops.transform.resize(value=(scale+x_extrude, scale+y_extrude, 1), orient_type='GLOBAL')
+        bpy.ops.transform.translate(value=(x_extrude/2, -y_extrude/2, 0), orient_type='GLOBAL')
+        bpy.context.object.name = "Iso Floor"
         if floor_thickness:
             bpy.ops.object.modifier_add(type='SOLIDIFY')
             bpy.context.object.modifiers["Solidify"].thickness = floor_thickness
-        bpy.ops.transform.translate(value=(x_extrude/2, -y_extrude/2, 0), orient_type='GLOBAL')
 
     def add_leftwall(self, scale, wall_thickness, wall_height, floor_thickness, y_extrude):
         bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(-scale/2, 0, wall_height/2))
+        bpy.context.object.rotation_euler[1] = 1.5708
+        bpy.ops.transform.resize(value=(1, scale+y_extrude, wall_height+floor_thickness))
+        bpy.ops.transform.translate(value=(0, -y_extrude/2, -floor_thickness/2), orient_type='GLOBAL')
         bpy.context.object.name = "Iso Left Wall"
         if wall_thickness:
             bpy.ops.object.modifier_add(type='SOLIDIFY')
             bpy.context.object.modifiers["Solidify"].thickness = wall_thickness
-        bpy.context.object.rotation_euler[1] = 1.5708
-        bpy.ops.transform.resize(value=(1, scale+y_extrude, wall_height+floor_thickness))
-        bpy.ops.transform.translate(value=(0, -y_extrude/2, -floor_thickness/2), orient_type='GLOBAL')
 
     def add_rightwall(self, scale, wall_thickness, wall_height, floor_thickness, x_extrude, offset):
         bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0-offset/2, scale/2, wall_height/2))
+        bpy.context.object.rotation_euler[0] = 1.5708
+        bpy.ops.transform.resize(value=(scale+offset+x_extrude, 1, wall_height+floor_thickness))
+        bpy.ops.transform.translate(value=(x_extrude/2, 0, 0-floor_thickness/2), orient_type='GLOBAL')
         bpy.context.object.name = "Iso Right Wall"
         if wall_thickness:
             bpy.ops.object.modifier_add(type='SOLIDIFY')
             bpy.context.object.modifiers["Solidify"].thickness = wall_thickness
-        bpy.context.object.rotation_euler[0] = 1.5708
-        bpy.ops.transform.resize(value=(scale+offset+x_extrude, 1, wall_height+floor_thickness))
-        bpy.ops.transform.translate(value=(x_extrude/2, 0, 0-floor_thickness/2), orient_type='GLOBAL')
 
     def add_hidden_ceiling(self, scale, height, x_extrude, y_extrude):
         bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, height))
