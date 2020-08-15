@@ -58,3 +58,5 @@ I'm still learning blender and it's API so if you find any bugs, please tell me 
 [Artstation](https://www.artstation.com/noelflobo)
 
 [@codellect on Instagram](https://www.instagram.com/codellect/)
+
+[Blender Artists Thread](https://blenderartists.org/t/isometquick-blender-2-8-quickly-set-up-isometric-scenes/1247427)
