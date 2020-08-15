@@ -9,6 +9,7 @@ A blender addon for quickly creating an isometric structure and cameras.
 [Contact](https://github.com/coffeestains/Isometquick#contact-me-to-report-bugs-suggest-features-or-if-you-have-any-queries)
 
 ### Download
+https://gumroad.com/l/rbzdZ
 
 ### Installation
 
