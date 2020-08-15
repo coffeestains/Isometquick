@@ -17,7 +17,7 @@ In Blender: Edit > Preferences > Addons > Install then select the downloaded zip
 ### Location:
 View3d > N-Panel > IsometQ
 
-### Features:
+### Features (More to come in the future):
 ![Panel](https://github.com/coffeestains/Isometquick/blob/master/images/panel.jpg)
 
 ![Iso redo](https://github.com/coffeestains/Isometquick/blob/master/images/redo_struct.jpg)
