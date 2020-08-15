@@ -1,4 +1,4 @@
-# Isometquick
+# Isometquick for blender 2.8+
 A blender addon for quickly creating an isometric structure and cameras.
 
 [Download](https://github.com/coffeestains/Isometquick#download) | 
