@@ -22,8 +22,16 @@ class ISOQ_OT_True_Camera(bpy.types.Operator):
         return context.area.type == "VIEW_3D"
 
     def execute(self, context):
+        cursor = bpy.context.scene.cursor.location
         iso_tool = context.scene.iso_tool
-        bpy.ops.object.camera_add(align='VIEW', location=(25,-25,self.true_iso_cam_height+iso_tool.default_iso_cam_height), rotation=(0.954695, 6.98132e-08, 0.785398))
+        bpy.ops.object.camera_add(
+            align='VIEW',
+            location=(
+                25+cursor[0],
+                -25+cursor[1],
+                self.true_iso_cam_height+iso_tool.default_iso_cam_height+cursor[2]
+                ),
+            rotation=(0.954695, 6.98132e-08, 0.785398))
         bpy.context.object.data.type = 'ORTHO'
         bpy.context.object.name = "Isometric Camera"
         bpy.context.object.data.ortho_scale = self.true_iso_cam_ortho
@@ -58,8 +66,16 @@ class ISOQ_OT_Game_Camera(bpy.types.Operator):
         return context.area.type == "VIEW_3D"
 
     def execute(self, context):
+        cursor = bpy.context.scene.cursor.location
         iso_tool = context.scene.iso_tool
-        bpy.ops.object.camera_add(align='VIEW', location=(25,-25,self.game_iso_cam_height+iso_tool.default_iso_cam_height), rotation=(1.0472, 6.98132e-08, 0.785398))
+        bpy.ops.object.camera_add(
+            align='VIEW', 
+            location=(
+                25+cursor[0],
+                -25+cursor[1],
+                self.game_iso_cam_height+iso_tool.default_iso_cam_height+cursor[2]),
+            rotation=(1.0472, 6.98132e-08, 0.785398)
+            )
         bpy.context.object.data.type = 'ORTHO'
         bpy.context.object.name = "Isometric Game Camera"
         bpy.context.object.data.ortho_scale = self.game_iso_cam_ortho

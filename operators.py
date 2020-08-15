@@ -50,17 +50,34 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
         min = 0
     )
             
-    def add_floor(self, scale, floor_thickness, x_extrude, y_extrude):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, 0))
+    def add_floor(self, cursor, scale, floor_thickness, x_extrude, y_extrude):
+        bpy.ops.mesh.primitive_plane_add(
+                                    size=1,
+                                    enter_editmode=False,
+                                    align='WORLD',
+                                    location=(
+                                        cursor[0],
+                                        cursor[1],
+                                        cursor[2]
+                                        )
+                                    )
         bpy.ops.transform.resize(value=(scale+x_extrude, scale+y_extrude, 1), orient_type='GLOBAL')
-        bpy.ops.transform.translate(value=(x_extrude/2, -y_extrude/2, 0), orient_type='GLOBAL')
+        bpy.ops.transform.translate(value=(x_extrude/2,-(y_extrude/2), 0), orient_type='GLOBAL')
         bpy.context.object.name = "Iso Floor"
         if floor_thickness:
             bpy.ops.object.modifier_add(type='SOLIDIFY')
             bpy.context.object.modifiers["Solidify"].thickness = floor_thickness
 
-    def add_leftwall(self, scale, wall_thickness, wall_height, floor_thickness, y_extrude):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(-scale/2, 0, wall_height/2))
+    def add_leftwall(self, cursor, scale, wall_thickness, wall_height, floor_thickness, y_extrude):
+        bpy.ops.mesh.primitive_plane_add(size=1,
+                                    enter_editmode=False,
+                                    align='WORLD',
+                                    location=(
+                                        -scale/2+cursor[0],
+                                        cursor[1],
+                                        wall_height/2+cursor[2]
+                                        )
+                                    )
         bpy.context.object.rotation_euler[1] = 1.5708
         bpy.ops.transform.resize(value=(1, scale+y_extrude, wall_height+floor_thickness))
         bpy.ops.transform.translate(value=(0, -y_extrude/2, -floor_thickness/2), orient_type='GLOBAL')
@@ -69,8 +86,14 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
             bpy.ops.object.modifier_add(type='SOLIDIFY')
             bpy.context.object.modifiers["Solidify"].thickness = wall_thickness
 
-    def add_rightwall(self, scale, wall_thickness, wall_height, floor_thickness, x_extrude, offset):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0-offset/2, scale/2, wall_height/2))
+    def add_rightwall(self, cursor, scale, wall_thickness, wall_height, floor_thickness, x_extrude, offset):
+        bpy.ops.mesh.primitive_plane_add(size=1,
+                                    enter_editmode=False,
+                                    align='WORLD',
+                                    location=(
+                                        -offset/2+cursor[0],
+                                        scale/2+cursor[1],
+                                        wall_height/2+cursor[2]))
         bpy.context.object.rotation_euler[0] = 1.5708
         bpy.ops.transform.resize(value=(scale+offset+x_extrude, 1, wall_height+floor_thickness))
         bpy.ops.transform.translate(value=(x_extrude/2, 0, 0-floor_thickness/2), orient_type='GLOBAL')
@@ -79,8 +102,8 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
             bpy.ops.object.modifier_add(type='SOLIDIFY')
             bpy.context.object.modifiers["Solidify"].thickness = wall_thickness
 
-    def add_hidden_ceiling(self, scale, height, x_extrude, y_extrude):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, height))
+    def add_hidden_ceiling(self, cursor, scale, height, x_extrude, y_extrude):
+        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(cursor[0], cursor[1], height+cursor[2]))
         bpy.ops.transform.resize(value=(scale+x_extrude, scale+y_extrude, 1), orient_type='GLOBAL')
         bpy.ops.transform.translate(value=(x_extrude/2, -y_extrude/2, 0), orient_type='GLOBAL')
         bpy.context.object.name = "Hidden Ceiling"
@@ -88,32 +111,50 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
         bpy.ops.object.hide_view_set(unselected=False)
 
 
-    def add_hidden_leftwall(self, scale, height, x_extrude, y_extrude):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(x_extrude/2, -1*scale/2-y_extrude, height/2))
+    def add_hidden_leftwall(self, cursor, scale, height, x_extrude, y_extrude):
+        bpy.ops.mesh.primitive_plane_add(
+                                    size=1,
+                                    enter_editmode=False,
+                                    align='WORLD',
+                                    location=(
+                                        x_extrude/2+cursor[0],
+                                        -1*scale/2-y_extrude+cursor[1],
+                                        height/2+cursor[2]
+                                        )
+                                    )
         bpy.ops.transform.rotate(value=1.5708, orient_axis='X', orient_type='GLOBAL')
         bpy.ops.transform.resize(value=(scale + x_extrude, 1, height), orient_type='GLOBAL')
         bpy.context.object.name = "Hidden Left Wall"
         bpy.context.object.cycles_visibility.camera = False
         bpy.ops.object.hide_view_set(unselected=False)
     
-    def add_hidden_rightwall(self, scale, height, x_extrude, y_extrude):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(scale/2+x_extrude, -y_extrude/2, height/2))
+    def add_hidden_rightwall(self, cursor, scale, height, x_extrude, y_extrude):
+        bpy.ops.mesh.primitive_plane_add(
+                                    size=1,
+                                    enter_editmode=False,
+                                    align='WORLD',
+                                    location=(
+                                        scale/2+x_extrude+cursor[0],
+                                        -y_extrude/2+cursor[1],
+                                        height/2+cursor[2]
+                                        )
+                                    )
         bpy.ops.transform.rotate(value=1.5708, orient_axis='Y', orient_type='GLOBAL')
         bpy.ops.transform.resize(value=(1, scale + y_extrude, height), orient_type='GLOBAL')
         bpy.context.object.name = "Hidden Right Wall"
         bpy.context.object.cycles_visibility.camera = False
         bpy.ops.object.hide_view_set(unselected=False)
 
-    def add_left_light(self, scale, height, wall_thickness, y_extrude):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, 0))
+    def add_left_light(self, cursor, scale, height, wall_thickness, y_extrude):
+        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(cursor[0], cursor[1], cursor[2]))
         bpy.context.object.name = "ISO Emission Left"
         bpy.ops.transform.translate(value=(-1*isoq_light_distance(scale, height, wall_thickness), -y_extrude/2, height/2), orient_type='GLOBAL')
         bpy.ops.transform.resize(value=(isoq_light_hypotenuse(height), scale+y_extrude, 1), orient_type='GLOBAL')
         bpy.ops.transform.rotate(value=-0.785398, orient_axis='Y', orient_type='GLOBAL')
         bpy.context.object.cycles_visibility.camera = False
 
-    def add_right_light(self, scale, height, wall_thickness, x_extrude):
-        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(0, 0, 0))
+    def add_right_light(self, cursor, scale, height, wall_thickness, x_extrude):
+        bpy.ops.mesh.primitive_plane_add(size=1, enter_editmode=False, align='WORLD', location=(cursor[0], cursor[1], cursor[2]))
         bpy.context.object.name = "ISO Emission Right"
         bpy.ops.transform.translate(value=(x_extrude/2, isoq_light_distance(scale, height, wall_thickness), height/2), orient_type='GLOBAL')
         bpy.ops.transform.resize(value=(scale+x_extrude, isoq_light_hypotenuse(height), 1), orient_type='GLOBAL')
@@ -125,6 +166,7 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
         return context.area.type == "VIEW_3D"
 
     def execute(self, context):
+        cursor = bpy.context.scene.cursor.location
         iso_tool = context.scene.iso_tool
         floor_scale = self.floor_scale_value
         floor_thickness = self.floor_thickness_value+self.equal_thickness_value
@@ -134,30 +176,31 @@ class ISOQ_OT_StructGen(bpy.types.Operator):
         wall_height = self.wall_height_value
         
         if iso_tool.create_left_wall:
-            self.add_leftwall(floor_scale, wall_thickness, wall_height, floor_thickness, y_extrude)
+            self.add_leftwall(cursor, floor_scale, wall_thickness, wall_height, floor_thickness, y_extrude)
         
         if iso_tool.create_right_wall and iso_tool.create_left_wall:
-            self.add_rightwall(floor_scale, wall_thickness, wall_height, floor_thickness, x_extrude, wall_thickness)
+            self.add_rightwall(cursor, floor_scale, wall_thickness, wall_height, floor_thickness, x_extrude, wall_thickness)
         elif iso_tool.create_right_wall:
-            self.add_rightwall(floor_scale, wall_thickness, wall_height, floor_thickness, x_extrude, 0)
+            self.add_rightwall(cursor, floor_scale, wall_thickness, wall_height, floor_thickness, x_extrude, 0)
         
         if iso_tool.create_floor:
-            self.add_floor(floor_scale, floor_thickness, x_extrude, y_extrude)
+            self.add_floor(cursor, floor_scale, floor_thickness, x_extrude, y_extrude)
         
         if iso_tool.create_right_light:
-            self.add_right_light(floor_scale, wall_height, wall_thickness, x_extrude)
+            self.add_right_light(cursor, floor_scale, wall_height, wall_thickness, x_extrude)
 
         if iso_tool.create_left_light:
-            self.add_left_light(floor_scale, wall_height, wall_thickness, y_extrude)
+            self.add_left_light(cursor, floor_scale, wall_height, wall_thickness, y_extrude)
         
         if iso_tool.create_hidden_ceiling:
-            self.add_hidden_ceiling(floor_scale, wall_height, x_extrude, y_extrude)
+            self.add_hidden_ceiling(cursor, floor_scale, wall_height, x_extrude, y_extrude)
         
         if iso_tool.create_hidden_rightwall:
-            self.add_hidden_rightwall(floor_scale, wall_height, x_extrude, y_extrude)
+            self.add_hidden_rightwall(cursor, floor_scale, wall_height, x_extrude, y_extrude)
         
         if iso_tool.create_hidden_leftwall:
-            self.add_hidden_leftwall(floor_scale, wall_height, x_extrude, y_extrude)
+            self.add_hidden_leftwall(cursor, floor_scale, wall_height, x_extrude, y_extrude)
+
 
         move_iso_objects()
         isoq_plane_emission()
