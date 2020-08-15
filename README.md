@@ -56,4 +56,5 @@ View3d > N-Panel > IsometQ
 I'm still learning blender and it's API so if you find any bugs, please tell me :)
 
 [Artstation](https://www.artstation.com/noelflobo)
+
 [@codellect on Instagram](https://www.instagram.com/codellect/)
