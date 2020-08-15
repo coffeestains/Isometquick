@@ -17,6 +17,9 @@ class ISOQ_OT_True_Camera(bpy.types.Operator):
         name='Ajust Height',
         default = 0
     )
+    @classmethod
+    def poll(cls, context):
+        return context.area.type == "VIEW_3D"
 
     def execute(self, context):
         iso_tool = context.scene.iso_tool
@@ -49,6 +52,10 @@ class ISOQ_OT_Game_Camera(bpy.types.Operator):
         name='Adjust Height',
         default = -4.65
     )
+
+    @classmethod
+    def poll(cls, context):
+        return context.area.type == "VIEW_3D"
 
     def execute(self, context):
         iso_tool = context.scene.iso_tool
