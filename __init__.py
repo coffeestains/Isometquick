@@ -1,7 +1,7 @@
 # Copyright (C) 2020 Noel Francis Lobo
 # codellectual@gmail.com
 # Created by Noel Lobo
-# (codellect - instagram | coffeestains - github | artstation.com/noelflobo)
+# (codellect - instagram | coffeestains - github)
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
